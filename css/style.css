@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 /* Organization of rules:
 1. Base rules (reset, body, ul, variables, color palette, fonts etc)
 2. Layout rules (header, nav, footer, sidebar, etc)
@@ -1034,26 +1027,10 @@ section:last-child {
 	}
 
 	/* Programi layout */
-	.program-card {
-		min-height: 39rem;
-	}
-
 	.program-container {
 		-ms-grid-columns: 1fr 2rem 1fr;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 2rem;
-	}
-
-	#program-mali-olimpijac .inside-wrapper {
-		min-height: 55rem;
-	}
-
-	#program-mali-avanturist .mali-olimpijac-card:nth-child(1) .inside-wrapper {
-		min-height: 87.3rem;
-	}
-
-	#program-mali-avanturist .mali-olimpijac-card:nth-child(4) .inside-wrapper {
-		min-height: 65rem;
 	}
 
 	/* Marquee */
@@ -1101,33 +1078,10 @@ section:last-child {
 	}
 }
 
-/* Layout */
-@media screen and (min-width: 1193px) {
-	.program-card {
-		min-height: 41rem;
-	}
-}
-
 @media screen and (min-width: 1250px) {
 	.grid-container {
 		-ms-grid-columns: (1fr) [4];
 		grid-template-columns: repeat(4, 1fr);
-	}
-
-	.program-card {
-		min-height: 38rem;
-	}
-
-	#program-mali-olimpijac .inside-wrapper {
-		min-height: 50rem;
-	}
-
-	#program-mali-avanturist .mali-olimpijac-card:nth-child(1) .inside-wrapper {
-		min-height: 77.5rem;
-	}
-
-	#program-mali-avanturist .mali-olimpijac-card:nth-child(4) .inside-wrapper {
-		min-height: 58.4rem;
 	}
 
 	@-webkit-keyframes marquee {
@@ -1191,4 +1145,13 @@ section:last-child {
 	html {
 		font-size: 220%;
 	}
+}
+
+.mali-olimpijac-card {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.inside-wrapper {
+	flex: 1;
 }
