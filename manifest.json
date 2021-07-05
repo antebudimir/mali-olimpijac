@@ -1,0 +1,54 @@
+{
+	"name": "Sportska akademija Mali olimpijac",
+	"short_name": "Mali olimpijac",
+	"description": "Sportska akademija „Mali olimpijac“ osnovana je u kolovozu 2011. godine s ciljem promicanja sporta od malih nogu, na zabavan i pravilan način.",
+	"start_url": "https://www.mali-olimpijac.antebudimir.com/",
+	"scope": ".",
+	"background_color": "#bff5ff",
+	"theme_color": "#bff5ff",
+	"display": "standalone",
+	"orientation": "portrait",
+	"dir": "ltr",
+	"lang": "hr",
+	"categories": ["olimpijac", "kineziterapija", "sport", "priroda", "avantura"],
+	"screenshots": [
+		{
+			"src": "img/screenshots/1.jpg",
+			"sizes": "1901x936",
+			"type": "image/jpg"
+		},
+		{
+			"src": "img/screenshots/2.jpg",
+			"sizes": "1899x933",
+			"type": "image/jpg"
+		},
+		{
+			"src": "img/screenshots/3.jpg",
+			"sizes": "1898x936",
+			"type": "image/jpg"
+		}
+	],
+	"icons": [
+		{
+			"src": "img/icons/icon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		},
+		{
+			"src": "img/icons/icon-384x384.png",
+			"sizes": "384x384",
+			"type": "image/png"
+		},
+		{
+			"src": "img/icons/icon-256x256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		},
+		{
+			"src": "img/icons/icon-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any maskable"
+		}
+	]
+}
