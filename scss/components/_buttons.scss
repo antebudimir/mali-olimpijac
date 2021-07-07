@@ -1,0 +1,11 @@
+// Buttons
+button {
+	color: $primary-color;
+	font-family: 'Hangyaboly';
+	font-size: 1.1rem;
+	font-weight: 600;
+
+	@include respond-to-width(1024px) {
+		cursor: pointer;
+	}
+}

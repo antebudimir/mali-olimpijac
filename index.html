@@ -18,13 +18,16 @@
     <!-- PWA -->
     <link rel="manifest" href="./manifest.json">
 
-    <!-- Style -->
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- <link rel="stylesheet" href="./css/style - before prefixing.css"> -->
+    <!-- Stylesheet -->
+    <link rel="preload" href="./css/main.css" as="style">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Gallery -->
     <link rel="stylesheet" href="./css/tobii.min.css">
 
-    <!-- Icons -->
-    <script defer src="https://kit.fontawesome.com/61d247919a.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://ka-f.fontawesome.com">
+    <script src="https://kit.fontawesome.com/61d247919a.js" crossorigin="anonymous"></script>
 
     <!-- Browser tab icon -->
     <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon" />
@@ -42,24 +45,24 @@
         <h1 class="hidden-visually">Sportska akademija "Mali olimpijac"</h1>
 
         <!-- Logo -->
-        <a class="logo" href="#home" title="Povratak na početnu stranicu" tabindex="0">
-            <img src="./img/logo.png" alt="Mali olimpijac logo" tabindex="0">
+        <a class="logo" href="#home" title="Povratak na početnu stranicu">
+            <img class="logo-img" src="./img/logo.png" alt="Mali olimpijac logo">
         </a>
 
         <!-- Menu -->
         <nav id="nav">
-            <div class="hamburger">
+            <div id="hamburger">
                 <i class="fa fa-bars"></i>
-                <i class="fas fa-times"></i>
+                <i class="fa fa-times"></i>
             </div>
 
             <ul class="menu">
-                <li class="menu-item" tabindex="0"><a href="#o-nama" title="Saznajte više o nama">O nama</a></li>
-                <li class="menu-item" tabindex="0"><a href="#programi" title="Pogledajte programe koje provodimo">Programi</a></li>
-                <li class="menu-item" tabindex="0"><a href="#galerija" title="Pogledajte galeriju fotografija">Galerija</a></li>
-                <li class="menu-item" tabindex="0"><a href="#blog" title="Blog o našim doživljajima">Blog</a></li>
-                <li class="menu-item" tabindex="0"><a href="#projekti" title="Projekti koje smo pokrenuli">Projekti</a></li>
-                <li class="menu-item" tabindex="0"><a href="#footer" title="Kontaktirajte nas i pridružite nam se">Kontakt</a></li>
+                <li class="menu-item"><a class="menu-link" href="#o-nama" title="Saznajte više o nama">O nama</a></li>
+                <li class="menu-item"><a class="menu-link" href="#programi" title="Pogledajte programe koje provodimo">Programi</a></li>
+                <li class="menu-item"><a class="menu-link" href="#galerija" title="Pogledajte galeriju fotografija">Galerija</a></li>
+                <li class="menu-item"><a class="menu-link" href="#blog" title="Blog o našim doživljajima">Blog</a></li>
+                <li class="menu-item"><a class="menu-link" href="#projekti" title="Projekti koje smo pokrenuli">Projekti</a></li>
+                <li class="menu-item"><a class="menu-link" href="#footer" title="Kontaktirajte nas i pridružite nam se">Kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -68,7 +71,7 @@
     <section id="showcase">
         <h2 class="hidden-visually">Uvodna fotografija</h2>
         <div class="section-frame">
-            <div class="container hero"></div>
+            <div class="image-container hero"></div>
         </div>
     </section>
 
@@ -80,7 +83,7 @@
             <h2>O nama</h2>
 
             <div class="section-frame">
-                <div class="container about-img"></div>
+                <div class="image-container about-img"></div>
                 <br>
                 <p>Sportska akademija „Mali olimpijac“ osnovana je u kolovozu 2011. godine s ciljem okupljanja što većeg broja djece. 
                     Želja nam je bila uvesti djecu u svijet sporta od malih nogu, na zabavan, a sa stručnog stajališta najpravilniji mogući način.</p>
@@ -197,7 +200,7 @@
                     <div class="text-box">
                         <h3>Matija Šokec - Max</h3>
                         <br>
-                        <p>ja sam Matija zvani Max, apsolvent sam Kineziološkog fakulteta. Uz Mali olimpijac trener sam dječje gimnastike, klizanja i plivanja. 
+                        <p>Ja sam Matija zvani Max, apsolvent sam Kineziološkog fakulteta. Uz Mali olimpijac trener sam dječje gimnastike, klizanja i plivanja. 
                             Veselim se svakom novom treningu uz naše mališane.</p>
                     </div>
                 </div>
@@ -258,226 +261,226 @@
             <div class="section-frame">
                 <!-- Filteri -->
                 <div class="filters">
-                    <button class="filter-btn">Sve</button>
-                    <button class="filter-btn">Mali olimpijac</button>
-                    <button class="filter-btn">Mali avanturist</button>
-                    <button class="filter-btn">Olimpijada</button>
-                    <button class="filter-btn">Borik</button>
-                    <button class="filter-btn">Kreativne radionice</button>
-                    <button class="filter-btn">Ljetni kamp</button>
-                    <button class="filter-btn">Zimski kamp</button>
+                    <button class="filter-btn active" title="Sve fotke">Sve</button>
+                    <button class="filter-btn" title="Fotke iz programa ''Mali olimpijac''">Mali olimpijac</button>
+                    <button class="filter-btn" title="Fotke iz programa ''Mali avanturist''">Mali avanturist</button>
+                    <button class="filter-btn" title="Fotke iz programa ''Olimpijada''">Olimpijada</button>
+                    <button class="filter-btn" title="Fotke sa Borika">Borik</button>
+                    <button class="filter-btn" title="Fotke s kreativnih radionica">Kreativne radionice</button>
+                    <button class="filter-btn" title="Fotke iz programa ''Ljetni kamp''">Ljetni kamp</button>
+                    <button class="filter-btn" title="Fotke iz programa ''Zimski kamp''">Zimski kamp</button>
                 </div>
                 <br>
                 <!-- Gallery -->
                 <div class="gallery-grid">
-                    <div class="placeholder" tabindex="0" data-filters="Mali avanturist">
+                    <div class="placeholder" data-filters="Mali avanturist">
                         <a class="lightbox" href="./img/full/asset-1.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-1.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-1.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Olimpijada">
+                    <div class="placeholder" data-filters="Olimpijada">
                         <a class="lightbox" href="./img/full/asset-2.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-2.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-2.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Borik">
+                    <div class="placeholder" data-filters="Borik">
                         <a class="lightbox" href="./img/full/asset-3.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-3.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-3.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Kreativne radionice">
+                    <div class="placeholder" data-filters="Kreativne radionice">
                         <a class="lightbox" href="./img/full/asset-4.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-4.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-4.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Ljetni kamp">
+                    <div class="placeholder" data-filters="Ljetni kamp">
                         <a class="lightbox" href="./img/full/asset-5.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-5.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-5.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-6.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-6.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-6.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Mali olimpijac">
+                    <div class="placeholder" data-filters="Mali olimpijac">
                         <a class="lightbox" href="./img/full/asset-7.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-7.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-7.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-8.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-8.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-8.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-9.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-9.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-9.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-10.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-10.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-10.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-11.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-11.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-11.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-12.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-12.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-12.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-13.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-13.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-13.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-14.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-14.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-14.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-15.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-15.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-15.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-16.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-16.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-16.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-17.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-17.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-17.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-18.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-18.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-18.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-19.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-19.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-19.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-20.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-20.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-20.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-21.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-21.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-21.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-22.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-22.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-22.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-23.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-23.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-23.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-24.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-24.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-24.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-25.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-25.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-25.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-26.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-26.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-26.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-27.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-27.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-27.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-28.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-28.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-28.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-29.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-29.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-29.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-30.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-30.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-30.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-31.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-31.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-31.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-32.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-32.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-32.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-33.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-33.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-33.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-34.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-34.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-34.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-35.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-35.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-35.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-36.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-36.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-36.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-37.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-37.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-37.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-38.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-38.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-38.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-39.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-39.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-39.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-40.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-40.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-40.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-41.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-41.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-41.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
-                    <div class="placeholder" tabindex="0" data-filters="Zimski kamp">
+                    <div class="placeholder" data-filters="Zimski kamp">
                         <a class="lightbox" href="./img/full/asset-42.jpeg" title="Djeca vježbaju">
-                            <img src="./img/thumb/asset-42.jpeg" alt="Djeca vježbaju" loading="lazy">
+                            <img class="image-thumb" src="./img/thumb/asset-42.jpeg" alt="Djeca vježbaju" loading="lazy">
                         </a>
                     </div>
                 </div>
@@ -489,7 +492,7 @@
             <h2>Blog</h2>
 
             <div class="section-frame">
-                <div class="container blog-img"></div>
+                <div class="image-container blog-img"></div>
             </div>
         </section>
 
@@ -498,7 +501,7 @@
             <h2>Projekti</h2>
 
             <div class="section-frame">
-                <div class="container projects-img"></div>
+                <div class="image-container projects-img"></div>
             </div>
         </section>
     </main>
@@ -512,35 +515,35 @@
     <footer id="footer">
         <div class="icon-container-1">
             <div class="contact-wrapper">
-                <a href="tel:+385977889791" title="Nazovite nas"><i class="phone"></i></a>
-                <span class="text">Nazovite <br> nas još danas</span>
+                <a href="tel:+385977889791" title="Nazovite nas"><i class="phone" tabindex="0"></i></a>
+                <div class="text">Nazovite <br> nas još danas</div>
             </div>
             <div class="contact-wrapper">
-                <a href="mailto:mali.olimpijac@gmail.com?subject=Upis%20olimpijca%20početnika" target="blank" rel="noopener" title="Pošaljite nam e-mail"><i class="mail"></i></a>
-                <span class="text">Pošaljite <br> nam e-mail</span>
+                <a href="mailto:mali.olimpijac@gmail.com?subject=Upis%20olimpijca%20početnika" target="blank" rel="noopener" title="Pošaljite nam e-mail"><i class="mail" tabindex="0"></i></a>
+                <div class="text">Pošaljite <br> nam e-mail</div>
             </div>
             <div class="contact-wrapper">
-                <a href="https://goo.gl/maps/y62JzF6ivxQt4VdCA" title="Naša adresa na Google Maps"><i class="address"></i></a>
-                <span class="text">Poljana dr. F. <br> Tuđmana 10</span>
+                <a href="https://goo.gl/maps/y62JzF6ivxQt4VdCA" title="Naša adresa na Google Maps"><i class="address" tabindex="0"></i></a>
+                <div class="text">Poljana dr. F. <br> Tuđmana 10</div>
             </div>
         </div>
         <br>
         <div class="icon-container-2">
             <div class="contact-wrapper">
-                <a href="https://www.instagram.com/maliolimpijac" title="Pratite nas na Instagramu"><i class="instagram"></i></a>
-                <span class="text">Pratite nas <br> na Instagramu</span>
+                <a href="https://www.instagram.com/maliolimpijac" title="Pratite nas na Instagramu"><i class="instagram" tabindex="0"></i></a>
+                <div class="text">Pratite nas <br> na Instagramu</div>
             </div>
             <div class="contact-wrapper">
-                <a href="https://web.facebook.com/mali.olimpijac" title="Pratite nas na Facebooku"><i class="facebook"></i></a>
-                <span class="text">Pratite nas <br> na Facebooku</span>
+                <a href="https://web.facebook.com/mali.olimpijac" title="Pratite nas na Facebooku"><i class="facebook" tabindex="0"></i></a>
+                <div class="text">Pratite nas <br> na Facebooku</div>
             </div>
         </div>
         <br>
-        <div class="footer-text">&copy; 2010. - <span id="currentYear"></span> <br> ''Mali olimpijac'' Bjelovar</div>
+        <div class="copyright">&copy; 2010. - <span id="currentYear"></span> <br> ''Mali olimpijac'' Bjelovar</div>
     </footer>
 
     <!-- JS -->
-    <script src="./js/tobii.min.js" defer></script>
-    <script src="./js/main.js" defer></script>
+    <script defer src="./js/tobii.min.js"></script>
+    <script defer src="./js/main.js"></script>
 </body>
 </html>

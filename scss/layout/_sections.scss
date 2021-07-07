@@ -1,0 +1,92 @@
+// Sections
+section {
+	position: relative;
+	margin: 1rem 1rem 5rem;
+	padding: 0.5rem;
+	background-color: $primary-color;
+
+	&:last-child {
+		margin-bottom: 2rem;
+	}
+
+	@include respond-to-width(1024px) {
+		&:not(:last-child) {
+			margin-bottom: 7rem;
+		}
+	}
+}
+
+// individual program pages - override for showcase section
+#home-mali-olimpijac > #showcase,
+#home-mali-avanturist > #showcase,
+#home-kondicijska-priprema > #showcase,
+#home-djecja-kineziterapija > #showcase {
+	margin-bottom: 2.5rem;
+}
+
+.section-frame {
+	border: 2px dashed $text-color-1;
+	padding: 0.5rem;
+
+	@include respond-to-width(768px) {
+		padding: 2rem;
+	}
+
+	@include respond-to-width(1024px) {
+		&:hover .card-link:not(:hover) {
+			filter: blur(0.1rem);
+		}
+	}
+}
+
+.image-container {
+	width: auto;
+	height: 50vh;
+
+	@include respond-to-width(1024px) {
+		height: 70vh;
+	}
+}
+
+.hero,
+.hero-mali-olimpijac,
+.hero-mali-avanturist,
+.hero-kondicijska-priprema,
+.hero-djecja-kineziterapija,
+.about-img,
+.blog-img,
+.projects-img {
+	@include background-properties;
+}
+
+#home .hero {
+	background-image: url(../img/bg/hero.jpeg);
+}
+
+.hero-mali-olimpijac {
+	background-image: url(../img/full/asset-22.jpeg);
+}
+
+.hero-mali-avanturist {
+	background-image: url(../img/full/asset-15.jpeg);
+}
+
+.hero-kondicijska-priprema {
+	background-image: url(../img/full/asset-14.jpeg);
+}
+
+.hero-djecja-kineziterapija {
+	background-image: url(../img/full/asset-31.jpeg);
+}
+
+.about-img {
+	background-image: url(../img/bg/o-nama.jpeg);
+}
+
+.blog-img {
+	background-image: url(../img/bg/blog.jpeg);
+}
+
+.projects-img {
+	background-image: url(../img/bg/projekti.jpeg);
+}

@@ -1,0 +1,32 @@
+// Scroll back to top button
+.scrollButton {
+	z-index: 1;
+	border: none;
+	border-radius: 50%;
+	display: none;
+	position: fixed;
+	bottom: 1rem;
+	left: 1rem;
+	width: 3rem;
+	height: 3rem;
+	background: $menu-item-4;
+	color: $primary-color;
+	text-align: center;
+
+	&:active,
+	&:focus,
+	&:hover {
+		animation: pop 0.15s forwards linear;
+	}
+
+	@keyframes pop {
+		to {
+			transform: scale(1.1);
+		}
+	}
+
+	@include respond-to-width(1024px) {
+		left: initial;
+		right: 1rem;
+	}
+}

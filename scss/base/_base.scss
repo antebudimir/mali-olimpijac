@@ -1,0 +1,44 @@
+// Base - global styles
+* {
+	outline: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+html {
+	@include respond-to-w-and-h(2200px, 1200px) {
+		font-size: 140%;
+	}
+
+	@include respond-to-height(2000px) {
+		font-size: 220%;
+	}
+}
+
+body {
+	max-width: 77rem;
+	margin: 0 auto;
+	background: $body-bg-gradient;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+a {
+	color: $primary-color;
+	font-size: 1.3rem;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+img {
+	display: block;
+}
+
+.hidden-visually {
+	@include hidden-visually;
+}

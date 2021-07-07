@@ -1,0 +1,138 @@
+// Share buttons
+#sharing-links-map,
+#sharing-links {
+	@include flex-layout(column, nowrap);
+	z-index: 800;
+	position: fixed;
+}
+
+#sharing-links-map {
+	bottom: 6.3rem;
+
+	@include respond-to-width(1024px) {
+		bottom: 7.8rem;
+	}
+}
+
+// Gallery, Europeana
+#sharing-links {
+	display: none;
+	bottom: 4.2rem;
+	left: 1rem;
+
+	.open.whatsapp {
+		margin: 0.5rem 0;
+	}
+
+	@include respond-to-width(1024px) {
+		right: 1rem;
+		left: initial;
+	}
+}
+
+// open class is added via JS
+.sharing-link,
+.sharing-link.open {
+	opacity: 1;
+	border: 2px solid rgb(209, 70, 70);
+	border-radius: $border-radius-primary;
+	box-shadow: $box-shadow-1;
+	width: $button-size;
+	height: $button-size;
+	transition: all 200ms;
+
+	@include respond-to-width(1024px) {
+		cursor: pointer;
+	}
+}
+
+.sharing-link {
+	background: $secondary-color;
+
+	&:hover,
+	&:focus {
+		background: $button-hover-color;
+	}
+}
+
+.fa-share-alt {
+	transform: translate(-5%, 10%);
+	color: $primary-color;
+	font-size: 1.5rem;
+}
+
+.toggle.open .fa-share-alt {
+	display: none;
+	transform: rotate(0deg) scale(0);
+}
+
+.toggle .fa-times {
+	display: none;
+}
+
+.toggle.open .fa-times {
+	display: initial;
+	transform: rotate(90deg) scale(1);
+}
+
+.facebook,
+.whatsapp {
+	opacity: 0;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.facebook {
+	background: rgb(60, 91, 155);
+
+	&:hover,
+	&:focus {
+		background: rgb(77, 119, 202);
+	}
+}
+
+.whatsapp {
+	background: rgb(11, 194, 4);
+
+	&:hover,
+	&:focus {
+		background: rgb(11, 215, 4);
+	}
+}
+
+.open.facebook {
+	margin: 0.7rem 0 0.2rem;
+	transition-delay: 150ms;
+}
+
+.open.whatsapp {
+	margin-bottom: 0.5rem;
+	transition-delay: 100ms;
+}
+
+.fa-times,
+.fa-facebook,
+.fa-whatsapp {
+	color: $button-hover-color;
+	font-size: 1.5rem;
+}
+
+.fa-facebook {
+	transform: translate(100%, 50%);
+}
+
+.fa-whatsapp {
+	font-size: 1.7rem;
+	transform: translate(45%, 33%);
+}
+
+.toggle.open {
+	background: $primary-color;
+}
+
+.toggle.open:hover {
+	background: $primary-color-brighter;
+}

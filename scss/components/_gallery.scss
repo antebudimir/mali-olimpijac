@@ -1,0 +1,52 @@
+// Gallery
+.gallery-grid {
+	display: grid;
+	gap: 0.5rem;
+
+	@include respond-to-width(768px) {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+	@include respond-to-width(1024px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.filters {
+	text-align: center;
+}
+
+.filter-btn {
+	border: none;
+	border-radius: 5px;
+	margin: 0.5rem 0;
+	padding: 1rem 1rem 0.7rem;
+	background: $menu-item-3;
+	color: $primary-color;
+	text-transform: uppercase;
+	text-align: center;
+
+	&.active,
+	&:hover,
+	&:focus {
+		@include pop-on-hover;
+		color: $text-color-1;
+	}
+
+	@include respond-to-width(768px) {
+		padding: 1.5rem 1rem 1.2rem;
+	}
+	@include respond-to-width(1024px) {
+		padding: 1rem 1rem 0.7rem;
+	}
+}
+
+.image-thumb {
+	width: 100%;
+	height: auto;
+}
+
+.image-thumb:hover,
+.lightbox:focus > .image-thumb {
+	@include pop-on-hover;
+}

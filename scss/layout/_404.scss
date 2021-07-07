@@ -1,0 +1,6 @@
+// 404 error page
+#error {
+	flex: 1; // sticking the footer to the bottom
+	@include flex-layout(column, nowrap); // centering the content
+	justify-content: center;
+}

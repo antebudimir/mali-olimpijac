@@ -1,0 +1,74 @@
+// Footer
+.icon-container-1,
+.icon-container-2 {
+	@include flex-alignment(space-evenly, center);
+	margin: 0 1.5rem;
+}
+
+.icon-container-2 {
+	justify-content: center;
+}
+
+.icon-container-2:not(:last-child) .contact-wrapper {
+	margin: 0 0.5rem;
+
+	@include respond-to-width(768px) {
+		margin: 0 4rem;
+	}
+}
+
+.contact-wrapper {
+	text-align: center;
+
+	// focus text and icons simultaneously
+	& a:hover i,
+	& a:focus i {
+		transform: rotateY(360deg);
+	}
+}
+
+.phone,
+.mail,
+.address,
+.instagram,
+.facebook {
+	@include background-properties;
+	display: inline-block;
+	width: 4rem;
+	height: 4rem;
+	transition: transform 0.8s ease;
+}
+
+.phone {
+	background-image: url(../img/icons/phone-icon.png);
+}
+
+.mail {
+	background-image: url(../img/icons/mail-icon.png);
+}
+
+.address {
+	background-image: url(../img/icons/address-icon.png);
+}
+
+.instagram {
+	background-image: url(../img/icons/instagram-icon.png);
+}
+
+.facebook {
+	background-image: url(../img/icons/facebook-icon.png);
+}
+
+.text {
+	font-size: 0.8rem;
+
+	@include respond-to-width(768px) {
+		font-size: 1rem;
+	}
+}
+
+.copyright {
+	padding: 1rem 0 2rem;
+	font-size: 1.5rem;
+	text-align: center;
+}

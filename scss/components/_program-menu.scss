@@ -1,0 +1,58 @@
+// Program menu
+.program-menu {
+	@include flex-layout(row, wrap);
+	justify-content: center;
+	margin: 0 0.8rem -1.1rem;
+}
+
+.program-menu-item {
+	border-radius: $border-radius-primary;
+	margin: 0.1rem;
+	text-align: center;
+
+	&:first-child {
+		background: $menu-item-1;
+	}
+
+	&:nth-child(2) {
+		background: $menu-item-2;
+	}
+
+	&:nth-child(3) {
+		background: $menu-item-3;
+	}
+
+	&:nth-child(4) {
+		background: $menu-item-4;
+	}
+
+	@include respond-to-width(468px) {
+		display: grid;
+		place-items: center;
+	}
+	@include respond-to-width(768px) {
+		margin: 0 0.2rem;
+	}
+}
+
+.program-menu-link {
+	display: block;
+	width: 9rem;
+	padding: 1.3rem 0 1rem;
+	font-weight: 500;
+
+	&.active {
+		transform: scale(1.15);
+		text-decoration: underline;
+	}
+
+	&:hover,
+	&:focus {
+		@include pop-on-hover;
+		font-weight: 600;
+	}
+
+	@include respond-to-width(615px) {
+		padding: 0.5rem 0 0.3rem;
+	}
+}

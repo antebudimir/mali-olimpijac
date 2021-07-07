@@ -1,0 +1,24 @@
+// Colors
+$body-bg-gradient: linear-gradient(
+	to bottom,
+	rgb(191, 245, 255) 0%,
+	rgb(210, 245, 255) 50%,
+	rgb(220, 255, 255) 90%,
+	rgb(230, 255, 255) 100%
+);
+$primary-color: white;
+$text-color-1: rgb(46, 136, 163);
+$text-color-2: rgb(59, 182, 219);
+$text-color-3: rgb(0, 0, 0);
+$menu-item-1: rgb(249, 204, 77);
+$menu-item-2: rgb(225, 76, 56);
+$menu-item-3: rgb(182, 193, 55);
+$menu-item-4: rgb(82, 146, 173);
+$menu-item-5: rgb(254, 148, 62);
+$menu-item-6: rgb(222, 129, 168);
+
+// Border-radiuses
+$border-radius-primary: 10px 10px 0 0;
+$border-radius-secondary: 10px;
+$border-radius-tertiary: 5px 5px 0 0;
+$border-radius-quaternary: 20px 20px 0 0;

@@ -39,13 +39,13 @@ navigator.serviceWorker.ready.then((registration) => {
 });
 
 // Hamburger
-const hamburger = document.querySelector('.hamburger'),
-	faBars = document.querySelector('.fa-bars'),
-	faTimes = document.querySelector('.fas.fa-times'),
-	menu = document.querySelector('.menu'),
-	bodyOverflow = document.querySelector('body');
-
 if (window.innerWidth < 1024) {
+	const hamburger = document.querySelector('#hamburger'),
+		faBars = document.querySelector('.fa-bars'),
+		faTimes = document.querySelector('.fa-times'),
+		menu = document.querySelector('.menu'),
+		bodyOverflow = document.querySelector('body');
+
 	hamburger.addEventListener('click', () => {
 		if (faBars.style.display === 'none') {
 			faBars.style.display = 'block';
@@ -83,30 +83,33 @@ if (window.innerWidth > 1023 && document.querySelector('#home')) {
 		link.remove();
 	}
 
-	// ...and wrap the cards into link tags
+	// ...and wrap the cards into links
 	const gridContainer = document.querySelector('.section-frame.grid-container'),
 		programCards = document.querySelectorAll('.program-card');
 
 	programCards.forEach((card) => {
-		let aTag = document.createElement('a');
-		aTag.setAttribute('class', 'card-link');
+		const cardLink = document.createElement('a');
+		cardLink.setAttribute('class', 'card-link');
 
-		aTag.append(card);
-		gridContainer.append(aTag);
+		cardLink.append(card);
+		gridContainer.append(cardLink);
 	});
 
-	aTag1 = document
-		.querySelector('#programi > div > a:nth-child(1)')
-		.setAttribute('href', 'mali-olimpijac.html');
-	aTag2 = document
-		.querySelector('#programi > div > a:nth-child(2)')
-		.setAttribute('href', 'mali-avanturist.html');
-	aTag3 = document
-		.querySelector('#programi > div > a:nth-child(3)')
-		.setAttribute('href', 'kondicijska-priprema.html');
-	aTag4 = document
-		.querySelector('#programi > div > a:nth-child(4)')
-		.setAttribute('href', 'djecja-kineziterapija.html');
+	const cardLink1 = document.querySelector('.card-link:first-child');
+	cardLink1.setAttribute('href', 'mali-olimpijac.html');
+	cardLink1.setAttribute('title', 'Program "Mali olimpijac"');
+
+	const cardLink2 = document.querySelector('.card-link:nth-of-type(2)');
+	cardLink2.setAttribute('href', 'mali-avanturist.html');
+	cardLink2.setAttribute('title', 'Program "Mali avanturist"');
+
+	const cardLink3 = document.querySelector('.card-link:nth-of-type(3)');
+	cardLink3.setAttribute('href', 'kondicijska-priprema.html');
+	cardLink3.setAttribute('title', 'Program "Kondicijska priprema"');
+
+	const cardLink4 = document.querySelector('.card-link:last-child');
+	cardLink4.setAttribute('href', 'djecja-kineziterapija.html');
+	cardLink4.setAttribute('title', 'Program "Dječja kineziterapija"');
 }
 
 // Gallery filter
@@ -135,16 +138,20 @@ buttons.forEach((button) => {
 });
 
 // Initialize tobii lightbox
-const tobii = new Tobii({
-	zoom: false,
-});
+const home = document.querySelector('#home');
+
+if (document.body === home) {
+	const tobii = new Tobii({
+		zoom: false,
+	});
+}
 
 // Add underline to the active sub-menu item
-const programMenuLinks = document.querySelectorAll('.program-menu-item a');
+const programMenuLinks = document.querySelectorAll('.program-menu-link');
 
 programMenuLinks.forEach((programMenuLink) => {
 	if (programMenuLink.href === location.href) {
-		programMenuLink.classList += 'active';
+		programMenuLink.classList += ' active';
 	}
 });
 
@@ -167,6 +174,6 @@ scrollToTop.addEventListener('click', () => {
 	document.documentElement.scrollTop = 0;
 });
 
-// Footer: current year
-document.querySelector('#currentYear').innerText =
-	new Date().getFullYear() + '.';
+// Date
+const currentYear = document.querySelector('#currentYear');
+currentYear.innerText = new Date().getFullYear() + '.';

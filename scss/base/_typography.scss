@@ -1,0 +1,130 @@
+// @font-faces:
+@font-face {
+	font-family: 'Hangyaboly';
+	src: url('../fonts/Hangyaboly.woff');
+}
+
+@font-face {
+	font-family: 'Source Serif Pro-Regular';
+	src: url('../fonts/SourceSerifPro-Regular.woff');
+}
+
+// All fonts declared:
+html {
+	font-family: 'Hangyaboly';
+}
+
+input,
+select,
+textarea,
+button {
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+h2 {
+	z-index: -1;
+	border-radius: $border-radius-tertiary;
+	position: absolute;
+	top: -2.2rem;
+	width: 5rem;
+	padding: 0.7rem 0.4rem;
+	color: $primary-color;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	text-align: center;
+
+	@include respond-to-width(1024px) {
+		top: -3.5rem;
+		width: 7rem;
+		padding: 1rem 1rem 0.7rem;
+		font-size: 1.5rem;
+		font-weight: 500;
+	}
+}
+
+#o-nama h2 {
+	left: 1.1rem;
+	background: $menu-item-1;
+	@include respond-to-width(1024px) {
+		left: 2.7rem;
+	}
+}
+
+#programi h2 {
+	left: 4rem;
+	background: $menu-item-2;
+	@include respond-to-width(1024px) {
+		left: 10rem;
+	}
+}
+
+#galerija h2 {
+	left: 7rem;
+	background: $menu-item-3;
+	@include respond-to-width(1024px) {
+		left: 18rem;
+	}
+}
+
+#blog h2 {
+	left: 10rem;
+	background: $menu-item-4;
+	@include respond-to-width(1024px) {
+		left: 26rem;
+	}
+}
+
+#projekti h2 {
+	left: 13rem;
+	background: $menu-item-5;
+	@include respond-to-width(1024px) {
+		left: 34rem;
+	}
+}
+
+h3,
+h4 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: center;
+
+	@include respond-to-width(600px) {
+		font-size: 2.2rem;
+	}
+}
+
+h3 {
+	margin-top: 1rem;
+	color: $text-color-2;
+
+	@include respond-to-width(1024px) {
+		margin: 0;
+	}
+}
+
+h4 {
+	color: $primary-color;
+}
+
+p,
+.program-item {
+	font-family: 'Source Serif Pro-Regular';
+	@include respond-to-width(600px) {
+		font-size: 1.2rem;
+	}
+}
+
+p {
+	line-height: 1.4;
+}
+
+.program-item {
+	line-height: 2;
+}
+
+footer {
+	font-family: 'Source Serif Pro-Regular';
+}

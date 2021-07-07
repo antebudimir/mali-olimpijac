@@ -1,0 +1,140 @@
+// Biographies
+.biography-container {
+	@include flex-layout(column, nowrap);
+	align-items: center;
+
+	@include respond-to-width(1024px) {
+		flex-direction: row;
+	}
+}
+
+.photo-frame {
+	@include background-properties;
+	border-radius: 50%;
+	width: 10rem;
+	height: 10rem;
+
+	&:hover {
+		@include pop-on-hover;
+	}
+
+	@include respond-to-width(1024px) {
+		min-width: 15rem;
+		min-height: 15rem;
+	}
+}
+
+.text-box {
+	@include respond-to-width(1024px) {
+		@include flex-layout(column, nowrap);
+	}
+}
+
+.mirela {
+	background-image: url(../img/coaches/160x160/mirela-160x160.jpg);
+
+	@include respond-to-width(1024px) {
+		background-image: url(../img/coaches/250x250/mirela-250x250.jpg);
+	}
+}
+
+.dario {
+	background-image: url(../img/coaches/160x160/dario-160x160.jpg);
+
+	@include respond-to-width(1024px) {
+		background-image: url(../img/coaches/250x250/dario-250x250.jpg);
+	}
+}
+
+.matija-1 {
+	background-image: url(../img/coaches/160x160/matija-1-160x160.jpg);
+
+	@include respond-to-width(1024px) {
+		background-image: url(../img/coaches/250x250/matija-1-250x250.jpg);
+	}
+}
+
+.ivan {
+	background-image: url(../img/coaches/160x160/ivan-160x160.jpg);
+
+	@include respond-to-width(1024px) {
+		background-image: url(../img/coaches/250x250/ivan-250x250.jpg);
+	}
+}
+
+.ivana {
+	background-image: url(../img/coaches/160x160/ivana-160x160.jpg);
+
+	@include respond-to-width(1024px) {
+		background-image: url(../img/coaches/250x250/ivana-250x250.jpg);
+	}
+}
+
+.zoran {
+	background-image: url(../img/coaches/160x160/zoran-160x160.jpg);
+
+	@include respond-to-width(1024px) {
+		background-image: url(../img/coaches/250x250/zoran-250x250.jpg);
+	}
+}
+
+.matija-2 {
+	background-image: url(../img/coaches/160x160/matija-2-160x160.jpeg);
+
+	@include respond-to-width(1024px) {
+		background-image: url(../img/coaches/250x250/matija-2-250x250.jpeg);
+	}
+}
+
+.matija-3 {
+	background-image: url(../img/coaches/160x160/matija-3-160x160.jpg);
+
+	@include respond-to-width(1024px) {
+		background-image: url(../img/coaches/250x250/matija-3-250x250.jpg);
+	}
+}
+
+.mirela ~ .text-box,
+.matija-1 ~ .text-box,
+.ivana ~ .text-box,
+.matija-2 ~ .text-box {
+	@include respond-to-width(1024px) {
+		margin-left: 2rem;
+	}
+}
+
+.mirela ~ .text-box h3,
+.matija-1 ~ .text-box h3,
+.ivana ~ .text-box h3,
+.matija-2 ~ .text-box h3 {
+	@include respond-to-width(1024px) {
+		align-self: start;
+	}
+}
+
+.dario,
+.ivan,
+.zoran,
+.matija-3 {
+	@include respond-to-width(1024px) {
+		order: 2;
+	}
+}
+
+.dario ~ .text-box,
+.ivan ~ .text-box,
+.zoran ~ .text-box,
+.matija-3 ~ .text-box {
+	@include respond-to-width(1024px) {
+		margin-right: 2rem;
+	}
+}
+
+.dario ~ .text-box h3,
+.ivan ~ .text-box h3,
+.zoran ~ .text-box h3,
+.matija-3 ~ .text-box h3 {
+	@include respond-to-width(1024px) {
+		align-self: flex-end;
+	}
+}

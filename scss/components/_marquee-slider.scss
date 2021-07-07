@@ -1,0 +1,93 @@
+// Marquee slider
+.marquee-container {
+	position: relative;
+	border-radius: 10px;
+	height: 3rem;
+	margin-bottom: 1rem;
+	padding: 1px;
+	background-color: $menu-item-3;
+	color: $primary-color;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.marquee-frame {
+	border: 2px dashed $menu-item-2;
+	border-radius: 10px;
+	padding: 1.3rem;
+}
+
+.marquee-text {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform: translateX(100%);
+	line-height: 2px;
+	animation: marquee 13s linear infinite;
+
+	@keyframes marquee {
+		0% {
+			transform: translateX(100%);
+		}
+		100% {
+			transform: translateX(-205%);
+		}
+	}
+
+	@include respond-to-width(1024px) {
+		@keyframes marquee {
+			0% {
+				transform: translateX(100%);
+			}
+			100% {
+				transform: translateX(-140%);
+			}
+		}
+	}
+
+	@include respond-to-width(1250px) {
+		@keyframes marquee {
+			0% {
+				transform: translateX(100%);
+			}
+			100% {
+				transform: translateX(-110%);
+			}
+		}
+	}
+}
+
+.marquee-text-2 {
+	animation: marquee-2 15s linear infinite;
+
+	@keyframes marquee-2 {
+		0% {
+			transform: translateX(100%);
+		}
+		100% {
+			transform: translateX(-325%);
+		}
+	}
+
+	@include respond-to-width(1024px) {
+		@keyframes marquee-2 {
+			0% {
+				transform: translateX(100%);
+			}
+			100% {
+				transform: translateX(-195%);
+			}
+		}
+	}
+
+	@include respond-to-width(1250px) {
+		@keyframes marquee-2 {
+			0% {
+				transform: translateX(100%);
+			}
+			100% {
+				transform: translateX(-155%);
+			}
+		}
+	}
+}

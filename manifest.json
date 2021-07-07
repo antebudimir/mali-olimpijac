@@ -2,7 +2,7 @@
 	"name": "Sportska akademija Mali olimpijac",
 	"short_name": "Mali olimpijac",
 	"description": "Sportska akademija „Mali olimpijac“ osnovana je u kolovozu 2011. godine s ciljem promicanja sporta od malih nogu, na zabavan i pravilan način.",
-	"start_url": "https://www.mali-olimpijac.antebudimir.com/",
+	"start_url": "/",
 	"scope": ".",
 	"background_color": "#bff5ff",
 	"theme_color": "#bff5ff",

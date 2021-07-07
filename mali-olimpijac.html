@@ -18,16 +18,14 @@
     <!-- PWA -->
     <link rel="manifest" href="./manifest.json">
 
-    <!-- Style -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/tobii.min.css">
+    <!-- Stylesheet -->
+    <link rel="preload" href="./css/main.css" as="style">
+    <link rel="stylesheet" href="./css/main.css">
 
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://ka-f.fontawesome.com">
+    <script src="https://kit.fontawesome.com/61d247919a.js" crossorigin="anonymous"></script>
 
-    <!-- Icons -->
-    <script defer src="https://kit.fontawesome.com/61d247919a.js" crossorigin="anonymous"></script>
-    
     <!-- Browser tab icon -->
     <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon" />
 
@@ -45,23 +43,23 @@
 
         <!-- Logo -->
         <a class="logo" href="index.html" title="Povratak na početnu stranicu">
-            <img src="./img/logo.png" alt="Mali olimpijac logo">
+            <img class="logo-img" src="./img/logo.png" alt="Mali olimpijac logo">
         </a>
 
         <!-- Menu -->
         <nav id="nav">
-            <div class="hamburger">
+            <div id="hamburger">
                 <i class="fa fa-bars"></i>
-                <i class="fas fa-times"></i>
+                <i class="fa fa-times"></i>
             </div>
 
             <ul class="menu">
-                <li class="menu-item" tabindex="0"><a href="index.html#o-nama" title="Saznajte više o nama">O nama</a></li>
-                <li class="menu-item" tabindex="0"><a href="index.html#programi" title="Pogledajte programe koje provodimo">Programi</a></li>
-                <li class="menu-item" tabindex="0"><a href="index.html#galerija" title="Pogledajte galeriju fotografija">Galerija</a></li>
-                <li class="menu-item" tabindex="0"><a href="index.html#blog" title="Blog o našim doživljajima">Blog</a></li>
-                <li class="menu-item" tabindex="0"><a href="index.html#projekti" title="Projekti koje smo pokrenuli">Projekti</a></li>
-                <li class="menu-item" tabindex="0"><a href="#footer" title="Kontaktirajte nas i pridružite nam se">Kontakt</a></li>
+                <li class="menu-item"><a class="menu-link" href="index.html#o-nama" title="Saznajte više o nama">O nama</a></li>
+                <li class="menu-item"><a class="menu-link" href="index.html#programi" title="Pogledajte programe koje provodimo">Programi</a></li>
+                <li class="menu-item"><a class="menu-link" href="index.html#galerija" title="Pogledajte galeriju fotografija">Galerija</a></li>
+                <li class="menu-item"><a class="menu-link" href="index.html#blog" title="Blog o našim doživljajima">Blog</a></li>
+                <li class="menu-item"><a class="menu-link" href="index.html#projekti" title="Projekti koje smo pokrenuli">Projekti</a></li>
+                <li class="menu-item"><a class="menu-link" href="#footer" title="Kontaktirajte nas i pridružite nam se">Kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -70,7 +68,7 @@
     <section id="showcase">
         <h2 class="hidden-visually">Uvodna fotografija</h2>
         <div class="section-frame">
-            <div class="container hero-mali-olimpijac"></div>
+            <div class="image-container hero-mali-olimpijac"></div>
             <br>
             <p>Zadatak sportske akademije „Mali olimpijac“ je prije svega zadovoljiti osnovne dječje potrebe za kretanjem, igrom i zabavom. 
                 Uz pomoć stručno osmišljenog višegodišnjeg programa, verificiranog od strane nadležnog ministarstva, (od 4. do 10. godine života) 
@@ -94,10 +92,10 @@
         
         <!-- Program menu -->
         <ul class="program-menu">
-            <li class="program-menu-item" tabindex="0"><a href="mali-olimpijac.html" title="Saznajte više o programu ''Mali olimpijac''">Mali olimpijac</a></li>
-            <li class="program-menu-item" tabindex="0"><a href="mali-avanturist.html" title="Saznajte više o programu ''Mali avanturist''">Mali avanturist</a></li>
-            <li class="program-menu-item" tabindex="0"><a href="kondicijska-priprema.html" title="Saznajte više o programu ''Kondicijska priprema''">Kondicijska priprema</a></li>
-            <li class="program-menu-item" tabindex="0"><a href="djecja-kineziterapija.html" title="Saznajte više o programu ''Dječja kineziterapija''">Dječja kineziterapija</a></li>
+            <li class="program-menu-item"><a class="program-menu-link" href="mali-olimpijac.html" title="Saznajte više o programu ''Mali olimpijac''">Mali olimpijac</a></li>
+            <li class="program-menu-item"><a class="program-menu-link" href="mali-avanturist.html" title="Saznajte više o programu ''Mali avanturist''">Mali avanturist</a></li>
+            <li class="program-menu-item"><a class="program-menu-link" href="kondicijska-priprema.html" title="Saznajte više o programu ''Kondicijska priprema''">Kondicijska priprema</a></li>
+            <li class="program-menu-item"><a class="program-menu-link" href="djecja-kineziterapija.html" title="Saznajte više o programu ''Dječja kineziterapija''">Dječja kineziterapija</a></li>
         </ul>
 
         <!-- Programi -->
@@ -106,7 +104,7 @@
 
             <!-- 1. Sportska igraonica -->
             <div class="section-frame program-container">
-                <div class="mali-olimpijac-card">
+                <div class="brochure">
                     <h4>Sportska igraonica</h4>
                   
                     <div class="inside-wrapper">
@@ -138,7 +136,7 @@
                 </div>
             
                 <!-- 2. Osnovnoškolci -->
-                <div class="mali-olimpijac-card">
+                <div class="brochure">
                     <h4>Osnovnoškolci</h4>
 
                     <div class="inside-wrapper">
@@ -180,35 +178,34 @@
     <footer id="footer">
         <div class="icon-container-1">
             <div class="contact-wrapper">
-                <a href="tel:+385977889791" title="Nazovite nas"><i class="phone"></i></a>
-                <span class="text">Nazovite <br> nas još danas</span>
+                <a href="tel:+385977889791" title="Nazovite nas"><i class="phone" tabindex="0"></i></a>
+                <div class="text">Nazovite <br> nas još danas</div>
             </div>
             <div class="contact-wrapper">
-                <a href="mailto:mali.olimpijac@gmail.com?subject=Upis%20olimpijca%20početnika" target="blank" rel="noopener" title="Pošaljite nam e-mail"><i class="mail"></i></a>
-                <span class="text">Pošaljite <br> nam e-mail</span>
+                <a href="mailto:mali.olimpijac@gmail.com?subject=Upis%20olimpijca%20početnika" target="blank" rel="noopener" title="Pošaljite nam e-mail"><i class="mail" tabindex="0"></i></a>
+                <div class="text">Pošaljite <br> nam e-mail</div>
             </div>
             <div class="contact-wrapper">
-                <a href="https://goo.gl/maps/y62JzF6ivxQt4VdCA" title="Naša adresa na Google Maps"><i class="address"></i></a>
-                <span class="text">Poljana dr. F. <br> Tuđmana 10</span>
+                <a href="https://goo.gl/maps/y62JzF6ivxQt4VdCA" title="Naša adresa na Google Maps"><i class="address" tabindex="0"></i></a>
+                <div class="text">Poljana dr. F. <br> Tuđmana 10</div>
             </div>
         </div>
         <br>
         <div class="icon-container-2">
             <div class="contact-wrapper">
-                <a href="https://www.instagram.com/maliolimpijac" title="Pratite nas na Instagramu"><i class="instagram"></i></a>
-                <span class="text">Pratite nas <br> na Instagramu</span>
+                <a href="https://www.instagram.com/maliolimpijac" title="Pratite nas na Instagramu"><i class="instagram" tabindex="0"></i></a>
+                <div class="text">Pratite nas <br> na Instagramu</div>
             </div>
             <div class="contact-wrapper">
-                <a href="https://web.facebook.com/mali.olimpijac" title="Pratite nas na Facebooku"><i class="facebook"></i></a>
-                <span class="text">Pratite nas <br> na Facebooku</span>
+                <a href="https://web.facebook.com/mali.olimpijac" title="Pratite nas na Facebooku"><i class="facebook" tabindex="0"></i></a>
+                <div class="text">Pratite nas <br> na Facebooku</div>
             </div>
         </div>
         <br>
-        <div class="footer-text">&copy; 2010. - <span id="currentYear"></span> <br> ''Mali olimpijac'' Bjelovar</div>
+        <div class="copyright">&copy; 2010. - <span id="currentYear"></span> <br> ''Mali olimpijac'' Bjelovar</div>
     </footer>
 
     <!-- JS -->
-    <script src="./js/tobii.min.js" defer></script>
-    <script src="./js/main.js" defer></script>
+    <script defer src="./js/main.js"></script>
 </body>
 </html>

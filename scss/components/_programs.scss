@@ -1,0 +1,146 @@
+// Programs
+.grid-container,
+.program-container:not(#program-kondicijska-priprema
+		.program-container):not(#program-djecja-kineziterapija .program-container) {
+	display: grid;
+	gap: 0.5rem;
+}
+
+.grid-container {
+	@include respond-to-width(768px) {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+	@include respond-to-width(1250px) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+.program-container {
+	@include respond-to-width(1024px) {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+}
+
+.program-card,
+.brochure {
+	border-radius: $border-radius-quaternary;
+	padding: 1rem;
+	background: $menu-item-2;
+	color: $primary-color;
+}
+
+.program-card {
+	@include respond-to-width(1193px) {
+		min-height: 41.5rem;
+	}
+	@include respond-to-width(1250px) {
+		min-height: 37.5rem;
+	}
+}
+
+.brochure {
+	@include respond-to-width(1024px) {
+		@include flex-layout(column, nowrap);
+	}
+}
+
+// Inserted via JS
+.card-link {
+	@include respond-to-width(1024px) {
+		font-weight: 400;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			@include pop-on-hover;
+		}
+	}
+}
+
+.card-image {
+	width: 100%;
+	height: auto;
+	margin: 1rem 0;
+}
+
+.inside-wrapper {
+	padding: 1rem;
+	background-color: $primary-color;
+	color: $text-color-3;
+
+	// in combo with .brochure d:flex
+	@include respond-to-width(1024px) {
+		flex: 1;
+	}
+}
+
+.program-item {
+	margin-left: 1.5rem;
+	list-style-type: decimal;
+}
+
+.more-link,
+.apply-link {
+	display: block;
+	width: 8rem;
+	padding: 1.3rem 1rem 1rem;
+	text-align: center;
+}
+
+.more-link {
+	border-radius: $border-radius-primary;
+	margin: 1rem auto 0;
+	background: $menu-item-3;
+	color: $menu-item-4;
+}
+
+.apply-link {
+	border-radius: $border-radius-secondary;
+	box-shadow: 0 0 0 1px $menu-item-3;
+	margin: 2rem auto;
+	background: $menu-item-2;
+	color: $primary-color;
+	text-transform: uppercase;
+
+	&:hover,
+	&:focus {
+		@include pop-on-hover;
+	}
+}
+
+// Individual programs
+.years,
+.locations {
+	margin-bottom: 0.5rem;
+	color: $text-color-1;
+	text-transform: uppercase;
+	font-weight: 500;
+	text-align: center;
+}
+
+.years {
+	font-size: 2.2rem;
+}
+
+.weekly {
+	font-size: 1.1rem;
+}
+
+.locations {
+	font-size: 2rem;
+
+	&:before {
+		content: attr(aria-label);
+	}
+}
+
+.city {
+	list-style-type: disc;
+	list-style-position: inside;
+	margin-top: 1rem;
+	color: $menu-item-3;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
