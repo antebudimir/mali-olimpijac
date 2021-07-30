@@ -41,36 +41,48 @@ navigator.serviceWorker.ready.then((registration) => {
 // Hamburger
 if (window.innerWidth < 1024) {
 	const hamburger = document.querySelector('#hamburger'),
-		faBars = document.querySelector('.fa-bars'),
-		faTimes = document.querySelector('.fa-times'),
 		menu = document.querySelector('.menu'),
-		bodyOverflow = document.querySelector('body');
+		icon = document.querySelector('#menu-icon'),
+		body = document.querySelector('body');
 
 	hamburger.addEventListener('click', () => {
-		if (faBars.style.display === 'none') {
-			faBars.style.display = 'block';
-			faTimes.style.display = 'none';
-			menu.style.display = 'none';
-			bodyOverflow.style.overflow = 'auto';
+		if (menu.style.display === 'none' || menu.style.display === '') {
+			setTimeout(() => {
+				menu.style.display = 'flex';
+				menu.style.flexFlow = 'column nowrap';
+				menu.style.justifyContent = 'center';
+				menu.style.alignItems = 'center';
+				menu.style.animation = 'slideIn 500ms ease-in';
+			}, 1);
+
+			hamburger.style.top = '1.75rem';
+			icon.classList.remove('fa-bars');
+			icon.classList.add('fa-times');
+			icon.style.color = 'rgb(255, 30, 0)';
+			icon.style.transition = 'color 300ms ease-in';
+			body.style.overflow = 'hidden';
 		} else {
-			faBars.style.display = 'none';
-			faTimes.style.display = 'block';
-			faTimes.style.color = 'red';
-			menu.style.display = 'flex';
-			menu.style.flexFlow = 'column nowrap';
-			menu.style.justifyContent = 'center';
-			menu.style.alignItems = 'center';
-			bodyOverflow.style.overflow = 'hidden';
+			slideOut();
 		}
 	});
 
-	// Close menu on outside click
+	// Outside click
 	menu.addEventListener('click', () => {
-		faBars.style.display = 'block';
-		faTimes.style.display = 'none';
-		menu.style.display = 'none';
-		bodyOverflow.style.overflow = 'auto';
+		slideOut();
 	});
+
+	function slideOut() {
+		menu.style.animation = 'slideOut 500ms ease-in';
+		setTimeout(() => {
+			menu.style.display = 'none';
+		}, 300);
+
+		hamburger.style.top = '1.8rem';
+		icon.classList.remove('fa-times');
+		icon.classList.add('fa-bars');
+		icon.style.color = 'rgb(46, 136, 163)';
+		body.style.overflow = 'unset';
+	}
 }
 
 // Remove the link buttons on desktop...
