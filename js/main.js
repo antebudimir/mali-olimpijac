@@ -72,7 +72,7 @@ if (window.innerWidth < 1024) {
 	});
 
 	function slideOut() {
-		menu.style.animation = 'slideOut 500ms ease-in';
+		menu.style.animation = 'slideOut 350ms ease-in';
 		setTimeout(() => {
 			menu.style.display = 'none';
 		}, 300);
