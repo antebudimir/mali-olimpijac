@@ -2,5 +2,4 @@
 
 Brochure website for children's sports academy.
 
-Demo:
-https://antebudimir.github.io/mali-olimpijac/
+Live preview: Live preview: https://maliolimpijac.antebudimir.com/
